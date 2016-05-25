@@ -23,42 +23,46 @@ using JaCotei.Api.V1.Model;
 
 ### POST offers ###
 
-Faça uma chamada com 1000 ofertas
+Faça uma chamada com 100 ofertas
 ```CSharp
 Configuration.apiKey.Add ("client_id","xxxx");
 Configuration.apiKey.Add ("access_token","xxxx");
 
-ApiClient apiClient = new ApiClient("https://webapisb.jacotei.com.br/publisher/v1"); //endpoint sandbox
+ApiClient apiClient = new ApiClient("https://webapisb.jacotei.com.br/publisher/v1");
 
 OffersApi offersApi = new OffersApi (apiClient);
 
-Offer offer1 = new Offer ();
-offer1.Sku      = "9788573089127fasdf";
-//offer1.Barcode  = "9788573089127";
-//offer1.Isbn     = "9788573089127";
-offer1.Link     = "http://aasdfaf.com/asdflasdf";
 
-
-OfferPrice offerPrice = new OfferPrice ();
-offerPrice.Price = 30.60;
-offerPrice.Installment = 1;
-offerPrice.InstallmentValue = 1;
-
-List<OfferPrice> offerPriceList = new List<OfferPrice> ();
-offerPriceList.Add (offerPrice);
-offer1.Prices = offerPriceList;
 
 
 List<Offer> offerList = new List<Offer> ();
-for(int i = 0; i < 1000 ; i++){
+for(int i = 0; i < 100 ; i++){
+	Offer offer1 = new Offer ();
+	offer1.Sku      = "9788573089127fasdf";
+	//offer1.Barcode  = "9788573089127";
+	//offer1.Isbn     = "9788573089127";
+	offer1.Link     = "http://aasdfaf.com/asdflasdf";
+
+
+	OfferPrice offerPrice = new OfferPrice ();
+	offerPrice.Price = 30.60;
+	offerPrice.Installment = 1;
+	offerPrice.InstallmentValue = 1;
+
+	List<OfferPrice> offerPriceList = new List<OfferPrice> ();
+	offerPriceList.Add (offerPrice);
+	offer1.Prices = offerPriceList;
+
+	List<String> images = new List<String> ();
+	images.Add ("http://asdfaf.com/asdfasdf");
+	offer1.Images = images;
+
 	offer1.Sku      = ""+i;
 	offer1.Title = "Oferta " + i;
 	offerList.Add (offer1);
 }
 
-List<String> images = new List<String> ();
-images.Add ("http://asdfaf.com/asdfasdf");
-offer1.Images = images;
+
 
 
 OfferRequest request = new OfferRequest ();
