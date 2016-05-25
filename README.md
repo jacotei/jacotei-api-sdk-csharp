@@ -12,7 +12,7 @@ A dll *JaCotei.Api.V1.Client.dll* será gerada no diretório *bin*
 ## Exemplo de Utilização ##
 
 Importe as libs
-``` 
+``` CSharp
 using System;
 using System.Collections.Generic;
 
@@ -24,7 +24,7 @@ using JaCotei.Api.V1.Model;
 ### POST offers ###
 
 Faça uma chamada com 1000 ofertas
-```Csharp
+```CSharp
       Configuration.apiKey.Add ("client_id","xxxx");
 			Configuration.apiKey.Add ("access_token","xxxx");
 
@@ -73,7 +73,7 @@ Faça uma chamada com 1000 ofertas
 ### GET offer ###
 
 Obtenha 1 oferta
-```Csharp
+```CSharp
 Configuration.apiKey.Add ("client_id","xxxx");
 			Configuration.apiKey.Add ("access_token","xxxx");
 
