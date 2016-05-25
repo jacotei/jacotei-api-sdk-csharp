@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JaCotei.Api.V1.Client</name>
+    </assembly>
+    <members>
+        <member name="T:JaCotei.Api.V1.Client.ApiClient">
+            <summary>
+            API client is mainly responible for making the HTTP call to the API backend
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Client.ApiClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JaCotei.Api.V1.Client.ApiClient"/> class.
+            </summary>
+            <param name="basePath">The base path.</param>
+        </member>
+        <!-- Comentário XML formatado incorretamente ignorado para o membro "M:JaCotei.Api.V1.Client.ApiClient.AddDefaultHeader(System.String,System.String)" -->
+        <member name="M:JaCotei.Api.V1.Client.ApiClient.GetDefaultHeader">
+            <summary>
+            Get default header
+            </summary>
+            <returns>Dictionary of default header</returns>
+        </member>
+        <!-- Comentário XML formatado incorretamente ignorado para o membro "M:JaCotei.Api.V1.Client.ApiClient.EscapeString(System.String)" -->
+        <!-- Comentário XML formatado incorretamente ignorado para o membro "M:JaCotei.Api.V1.Client.ApiClient.ParameterToString(System.Object)" -->
+        <!-- Comentário XML formatado incorretamente ignorado para o membro "M:JaCotei.Api.V1.Client.ApiClient.Deserialize(System.String,System.Type)" -->
+        <!-- Comentário XML formatado incorretamente ignorado para o membro "M:JaCotei.Api.V1.Client.ApiClient.Serialize(System.Object)" -->
+        <!-- Comentário XML formatado incorretamente ignorado para o membro "M:JaCotei.Api.V1.Client.ApiClient.GetApiKeyWithPrefix(System.String)" -->
+        <member name="M:JaCotei.Api.V1.Client.ApiClient.UpdateParamsForAuth(System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.String[])">
+            <summary>
+            Update parameters based on authentication
+            </summary>
+            <param name="QueryParams">Query parameters</param>
+            <param name="HeaderParams">Header parameters</param>
+            <param name="AuthSettings">Authentication settings</param>
+        </member>
+        <member name="M:JaCotei.Api.V1.Client.ApiClient.Base64Encode(System.String)">
+            <summary>
+            Encode string in base64 format 
+            </summary>
+            <param name="text">String to be encoded</param>
+        </member>
+        <member name="P:JaCotei.Api.V1.Client.ApiClient.basePath">
+            <summary>
+            Gets or sets the base path.
+            </summary>
+            <value>The base path.</value> 
+        </member>
+        <member name="P:JaCotei.Api.V1.Client.ApiClient.restClient">
+            <summary>
+            Gets or sets the RestClient
+            </summary>
+            <value>The RestClient.</value> 
+        </member>
+        <member name="T:JaCotei.Api.V1.Client.ApiException">
+            <summary>
+            API Exception
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Client.ApiException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:JaCotei.Api.V1.Client.ApiException"/> class.
+            </summary>
+            <param name="basePath">The base path.</param>
+        </member>
+        <member name="M:JaCotei.Api.V1.Client.ApiException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JaCotei.Api.V1.Client.ApiException"/> class.
+            </summary>
+            <param name="errorCode">HTTP status code.</param>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="P:JaCotei.Api.V1.Client.ApiException.ErrorCode">
+            <summary>
+            Gets or sets the error code (HTTP status code)
+            </summary>
+            <value>The error code (HTTP status code).</value>
+        </member>
+        <member name="P:JaCotei.Api.V1.Client.ApiException.ErrorContent">
+            <summary>
+            Gets or sets the error content (body json object)
+            </summary>
+            <value>The error content (Http response body).</value>
+        </member>
+        <member name="T:JaCotei.Api.V1.Client.Configuration">
+            <summary>
+            Represents a set of configuration settings
+            </summary>
+        </member>
+        <member name="F:JaCotei.Api.V1.Client.Configuration.apiClient">
+            <summary>
+            Gets or sets the API client. This is the default API client for making HTTP calls.
+            </summary>
+            <value>The API client.</value>
+        </member>
+        <member name="F:JaCotei.Api.V1.Client.Configuration.apiKey">
+            <summary>
+            Gets or sets the API key based on the authentication name 
+            </summary>
+            <value>The API key.</value>
+        </member>
+        <member name="F:JaCotei.Api.V1.Client.Configuration.apiKeyPrefix">
+            <summary>
+            Gets or sets the prefix (e.g. Token) of the API key based on the authentication name 
+            </summary>
+            <value>The prefix of the API key.</value>
+        </member>
+        <member name="P:JaCotei.Api.V1.Client.Configuration.username">
+            <summary>
+            Gets or sets the username (HTTP basic authentication)
+            </summary>
+            <value>The username.</value>
+        </member>
+        <member name="P:JaCotei.Api.V1.Client.Configuration.password">
+            <summary>
+            Gets or sets the password (HTTP basic authentication)
+            </summary>
+            <value>The password.</value>
+        </member>
+        <member name="T:JaCotei.Api.V1.Model.Error">
+            <summary>
+            O resultado de uma validaÃ§Ã£o de oferta.
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.Error.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.Error.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="T:JaCotei.Api.V1.Model.Offer">
+            <summary>
+            Uma oferta do Lojista
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.Offer.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.Offer.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="T:JaCotei.Api.V1.Model.OfferPrice">
+            <summary>
+            Um preÃ§o de uma oferta.
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferPrice.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferPrice.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="T:JaCotei.Api.V1.Model.OfferRejected">
+            <summary>
+            O resultado de uma validaÃ§Ã£o de oferta.
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferRejected.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferRejected.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="T:JaCotei.Api.V1.Model.OfferRequest">
+            <summary>
+            Uma requisiÃ§Ã£o para atualizaÃ§Ã£o de ofertas.
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferRequest.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="T:JaCotei.Api.V1.Model.OfferResponse">
+            <summary>
+            A resposta para uma requisiÃ§Ã£o de atualizaÃ§Ã£o de ofertas.
+            </summary>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferResponse.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.Model.OfferResponse.ToJson">
+            <summary>
+            Get the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.IOffersApi.UpdateOffersUsingPOST(JaCotei.Api.V1.Model.OfferRequest)">
+            <summary>
+            MÃ©todo de atualizaÃ§Ã£o de ofertas 
+            </summary>
+            <param name="Offers">offerUpdateRequest</param>
+            <returns>OfferResponse</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.IOffersApi.UpdateOffersUsingPOSTAsync(JaCotei.Api.V1.Model.OfferRequest)">
+            <summary>
+            MÃ©todo de atualizaÃ§Ã£o de ofertas 
+            </summary>
+            <param name="Offers">offerUpdateRequest</param>
+            <returns>OfferResponse</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.IOffersApi.GetOfferUsingGET(System.String)">
+            <summary>
+            Consulta de ofertas por sku 
+            </summary>
+            <param name="Sku">sku</param>
+            <returns>Offer</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.IOffersApi.GetOfferUsingGETAsync(System.String)">
+            <summary>
+            Consulta de ofertas por sku 
+            </summary>
+            <param name="Sku">sku</param>
+            <returns>Offer</returns>
+        </member>
+        <member name="T:JaCotei.Api.V1.OffersApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <!-- Comentário XML formatado incorretamente ignorado para o membro "M:JaCotei.Api.V1.OffersApi.#ctor(JaCotei.Api.V1.Client.ApiClient)" -->
+        <member name="M:JaCotei.Api.V1.OffersApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JaCotei.Api.V1.OffersApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.OffersApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:JaCotei.Api.V1.OffersApi.GetBasePath(System.String)">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:JaCotei.Api.V1.OffersApi.UpdateOffersUsingPOST(JaCotei.Api.V1.Model.OfferRequest)">
+            <summary>
+            MÃ©todo de atualizaÃ§Ã£o de ofertas 
+            </summary>
+            <param name="Offers">offerUpdateRequest</param>
+            <returns>OfferResponse</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.OffersApi.UpdateOffersUsingPOSTAsync(JaCotei.Api.V1.Model.OfferRequest)">
+            <summary>
+            MÃ©todo de atualizaÃ§Ã£o de ofertas 
+            </summary>
+            <param name="Offers">offerUpdateRequest</param>
+            <returns>OfferResponse</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.OffersApi.GetOfferUsingGET(System.String)">
+            <summary>
+            Consulta de ofertas por sku 
+            </summary>
+            <param name="Sku">sku</param>
+            <returns>Offer</returns>
+        </member>
+        <member name="M:JaCotei.Api.V1.OffersApi.GetOfferUsingGETAsync(System.String)">
+            <summary>
+            Consulta de ofertas por sku 
+            </summary>
+            <param name="Sku">sku</param>
+            <returns>Offer</returns>
+        </member>
+        <member name="P:JaCotei.Api.V1.OffersApi.apiClient">
+            <summary>
+            Gets or sets the API client.
+            </summary>
+            <value>The API client</value>
+        </member>
+    </members>
+</doc>
