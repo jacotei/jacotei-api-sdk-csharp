@@ -32,9 +32,6 @@ ApiClient apiClient = new ApiClient("https://webapisb.jacotei.com.br/publisher/v
 
 OffersApi offersApi = new OffersApi (apiClient);
 
-
-
-
 List<Offer> offerList = new List<Offer> ();
 for(int i = 0; i < 1000 ; i++){
 	Offer offer1 = new Offer ();
