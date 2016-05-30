@@ -90,3 +90,4 @@ try{
 ### Informações Adicionais ###
 
 Acesse https://desenvolvedores.jacotei.com.br
+- Códigos de Erros: https://desenvolvedores.jacotei.com.br/api-portal/node/5
