@@ -23,7 +23,7 @@ using JaCotei.Api.V1.Model;
 
 ### POST offers ###
 
-Faça uma chamada com 100 ofertas
+Faça uma chamada com 1000 ofertas
 ```CSharp
 Configuration.apiKey.Add ("client_id","xxxx");
 Configuration.apiKey.Add ("access_token","xxxx");
@@ -36,9 +36,9 @@ OffersApi offersApi = new OffersApi (apiClient);
 
 
 List<Offer> offerList = new List<Offer> ();
-for(int i = 0; i < 100 ; i++){
+for(int i = 0; i < 1000 ; i++){
 	Offer offer1 = new Offer ();
-	offer1.Sku      = "9788573089127fasdf";
+	offer1.Available = true;
 	//offer1.Barcode  = "9788573089127";
 	//offer1.Isbn     = "9788573089127";
 	offer1.Link     = "http://aasdfaf.com/asdflasdf";
@@ -61,9 +61,6 @@ for(int i = 0; i < 100 ; i++){
 	offer1.Title = "Oferta " + i;
 	offerList.Add (offer1);
 }
-
-
-
 
 OfferRequest request = new OfferRequest ();
 request.Offers = offerList;
