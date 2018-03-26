@@ -27,6 +27,9 @@ namespace JaCotei.Api.V1.Model {
     [DataMember(Name="images", EmitDefaultValue=false)]
     public List<string> Images { get; set; }
 
+    /* Categories dos produtos da oferta */
+    [DataMember(Name="categories", EmitDefaultValue=false)]
+    public List<string> Categories { get; set; }
     
     /* cÃ³digo de barras do livro */
     [DataMember(Name="isbn", EmitDefaultValue=false)]
@@ -67,6 +70,8 @@ namespace JaCotei.Api.V1.Model {
       sb.Append("  Barcode: ").Append(Barcode).Append("\n");
       
       sb.Append("  Images: ").Append(Images).Append("\n");
+
+      sb.Append("  Categories: ").Append(Categories).Append("\n");
       
       sb.Append("  Isbn: ").Append(Isbn).Append("\n");
       

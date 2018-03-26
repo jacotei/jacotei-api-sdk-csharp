@@ -54,6 +54,12 @@ for(int i = 0; i < 1000 ; i++){
 	images.Add ("http://asdfaf.com/asdfasdf");
 	offer1.Images = images;
 
+	List<String> categories = new List<String> ();
+	categories.Add ("Categoria");
+	categories.Add ("Subcategoria");
+	categories.Add ("Sub subcategoria");
+	offer1.Categories = categories;
+
 	offer1.Sku      = ""+i;
 	offer1.Title = "Oferta " + i;
 	offerList.Add (offer1);
